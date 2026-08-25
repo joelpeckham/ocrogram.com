@@ -7,6 +7,9 @@ export const alt = "ocrogram — Take a screenshot. Paste the text."
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
+const OG_BACKGROUND = "#1c1814"
+const OG_FOREGROUND = "#f4f0e6"
+
 const LOGO_VIEWBOX = { width: 1044, height: 1078 }
 const LOGO_HEIGHT = 320
 const LOGO_WIDTH = Math.round(
@@ -19,7 +22,8 @@ async function getLogoSrc() {
   )
     .replaceAll('width="100%"', `width="${LOGO_VIEWBOX.width}"`)
     .replaceAll('height="100%"', `height="${LOGO_VIEWBOX.height}"`)
-    .replace("<svg ", '<svg fill="#f4f0e6" ')
+    .replace("<svg ", `<svg fill="${OG_FOREGROUND}" `)
+    .replace('style="fill:white;"', `style="fill:${OG_BACKGROUND};"`)
 
   const png = await sharp(Buffer.from(svg))
     .resize(LOGO_WIDTH * 2, LOGO_HEIGHT * 2)
@@ -42,8 +46,8 @@ export default async function OpenGraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1c1814",
-          color: "#f4f0e6",
+          background: OG_BACKGROUND,
+          color: OG_FOREGROUND,
         }}
       >
         <img src={logoSrc} width={LOGO_WIDTH} height={LOGO_HEIGHT} />

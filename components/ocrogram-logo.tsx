@@ -30,7 +30,7 @@ export function OcrogramLogo({
           </g>
         </g>
       </g>
-      {/* 2. Yellow square inset with a white square */}
+      {/* 2. Yellow square inset with a background-colored square */}
       <g className="logo-layer logo-layer-squares">
         <g transform={ARTBOARD_OFFSET}>
           <g transform="translate(1266.038994 -26.794888)">
@@ -49,7 +49,7 @@ export function OcrogramLogo({
                 y="892.693"
                 width="1298.01"
                 height="1298.01"
-                fill="white"
+                fill="var(--background)"
               />
             </g>
           </g>
