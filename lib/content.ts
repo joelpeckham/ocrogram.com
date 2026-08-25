@@ -10,12 +10,7 @@ export const REQUIREMENTS = [
   {
     title: "Homebrew",
     detail:
-      "ocrogram ships as a tap formula: brew install joelpeckham/ocrogram/ocrogram. Homebrew 6 asks you to trust third-party tap formulas the first time.",
-  },
-  {
-    title: "Xcode Command Line Tools with Swift 6",
-    detail:
-      "The formula builds from source. Homebrew pulls Go in as a build dependency. You need a Swift 6 toolchain from Xcode or the Command Line Tools for your macOS version.",
+      "ocrogram ships as a tap formula: brew install joelpeckham/ocrogram/ocrogram. Homebrew 6 asks you to trust third-party tap formulas the first time. The formula downloads a prebuilt binary for Apple silicon or Intel.",
   },
   {
     title: "A screenshot that writes a file",
@@ -26,12 +21,8 @@ export const REQUIREMENTS = [
 
 export const INSTALL_STEPS: readonly HowToStep[] = [
   {
-    name: "Confirm the Command Line Tools",
-    text: "Run xcode-select -p. If that fails, install the Command Line Tools with xcode-select --install. If Homebrew later says Xcode is outdated, update Xcode or the CLT for your macOS, or remove a leftover /Applications/Xcode.app so Homebrew can use the CLT.",
-  },
-  {
     name: "Install ocrogram with Homebrew",
-    text: "Run brew install joelpeckham/ocrogram/ocrogram. That taps joelpeckham/homebrew-ocrogram, compiles the Go CLI and Swift helper from source, and puts ocrogram and ocrogram-helper on your PATH.",
+    text: "Run brew install joelpeckham/ocrogram/ocrogram. That taps joelpeckham/homebrew-ocrogram, downloads a prebuilt ocrogram and ocrogram-helper for your Mac, and puts them on your PATH.",
   },
   {
     name: "Start the login item",
@@ -85,7 +76,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
   {
     question: "Does it work on Intel Macs?",
     answer:
-      "Yes, if the Mac can run macOS 14. Homebrew builds from source for your architecture. There is no bottled binary.",
+      "Yes, if the Mac can run macOS 14. Homebrew downloads a prebuilt binary for Apple silicon or Intel.",
   },
   {
     question: "Does it work with CleanShot, Shottr, or other screenshot apps?",
@@ -111,7 +102,7 @@ export const TROUBLESHOOTING = [
   },
   {
     title: "Homebrew says Xcode is outdated",
-    body: "The formula compiles from source. Update Xcode or the Command Line Tools to the version for your macOS. If an old /Applications/Xcode.app is sitting around after you switched to the CLT, remove it so Homebrew can find the tools it wants.",
+    body: "Stable brew install does not compile. This only happens with brew install --HEAD, which builds from source. Update Xcode or the Command Line Tools to the version for your macOS. If an old /Applications/Xcode.app is sitting around after you switched to the CLT, remove it so Homebrew can find the tools it wants.",
   },
   {
     title: "I used Cmd+Ctrl+Shift+3 or 4",

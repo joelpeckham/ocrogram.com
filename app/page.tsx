@@ -215,9 +215,9 @@ export default function Page() {
             >
               joelpeckham/homebrew-ocrogram
             </a>
-            . Homebrew 6 asks you to trust third-party tap formulas. To build
-            latest <code className="text-foreground">main</code> instead of the
-            last release:
+            . Homebrew 6 asks you to trust third-party tap formulas. To compile
+            latest <code className="text-foreground">main</code> from source
+            instead of the last release:
           </p>
           <CodeSnippet>{HEAD_INSTALL_COMMAND}</CodeSnippet>
         </div>

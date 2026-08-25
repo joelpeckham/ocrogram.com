@@ -22,7 +22,7 @@ export function buildLlmsTxt(): string {
     "ocrogram start",
     "```",
     "",
-    "Requires macOS 14 (Sonoma) or later, Homebrew, and a Swift 6 toolchain (Xcode or Command Line Tools). Homebrew compiles from source and installs Go as a build dependency. `ocrogram start` writes a LaunchAgent at `~/Library/LaunchAgents/com.joelpeckham.ocrogram.plist`. `ocrogram stop` removes it. Logs: `~/Library/Logs/ocrogram.log`.",
+    "Requires macOS 14 (Sonoma) or later and Homebrew. `brew install` downloads a prebuilt binary for Apple silicon or Intel. Go and a Swift 6 toolchain are only needed to compile from source (`brew install --HEAD` or `make`). `ocrogram start` writes a LaunchAgent at `~/Library/LaunchAgents/com.joelpeckham.ocrogram.plist`. `ocrogram stop` removes it. Logs: `~/Library/Logs/ocrogram.log`.",
     "",
     "## Commands",
     "",
