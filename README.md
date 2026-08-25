@@ -1,21 +1,10 @@
-# Next.js template
+# ocrogram.com
 
-This is a Next.js template with shadcn/ui.
-
-## Adding components
-
-To add components to your app, run the following command:
+Marketing site for [ocrogram](https://github.com/joelpeckham/ocrogram) — a set-and-forget Mac screenshot OCR tool.
 
 ```bash
-npx shadcn@latest add button
+bun install
+bun dev
 ```
 
-This will place the ui components in the `components` directory.
-
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
-```
+Deployed on Vercel as a Next.js App Router app.
